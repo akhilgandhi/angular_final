@@ -1,0 +1,49 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$mat-yellow: (
+    50: #FFFDE7,
+    100: #FFF9C4,
+    200: #FFF59D,
+    300: #FFF176,
+    400: #FFEE58,
+    500: #FFEB3B,
+    600: #FDD835,
+    700: #FBC02D,
+    800: #F9A825,
+    900: #F57F17,
+    A100: #FFFF8D,
+    A200: #FFFF00,
+    A400: #FFEA00,
+    A700: #FFD600,
+    contrast: (
+        50: #212121,
+        100: white,
+        200: white,
+        300: #212121,
+        400: #212121,
+        500: #212121,
+        600: white,
+        700: white,
+        800: #212121,
+        900: #212121,
+        A100: #212121,
+        A200: #212121,
+        A400: #212121,
+        A700: #212121,
+    )
+);
+
+$white: (
+    100: white,
+    contrast: (
+        100: #212121,
+    )
+);
+
+$keepnote-app-primary: mat-palette($mat-yellow, 700, 200, 100);
+$keepnote-app-accent: mat-palette($white);
+
+$keepnote-app-theme: mat-light-theme($keepnote-app-primary, $keepnote-app-accent);
+
+@include angular-material-theme($keepnote-app-theme);
